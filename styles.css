@@ -1,0 +1,47 @@
+/* ------------
+   BASIC RESET
+--------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------
+   CUSTOM PROPS
+--------------- */
+
+/* 
+14
+12
+10
+
+*/
+
+:root {
+  font-size: 62.5%;
+
+  /* Typography */
+  --ff-inter: "Inter", sans-serif;
+  --fs-h2: 1.4rem;
+  --fs-h3: 1.4rem;
+  --fs-p: 1rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* Color */
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-gray-400: hsl(0, 0%, 90%);
+  --clr-gray-600: hsl(0, 0%, 95%);
+  --clr-blue-400: hsl(216, 100%, 62%);
+  --clr-red-400: hsl(355, 82%, 61%);
+}
