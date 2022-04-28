@@ -12,6 +12,7 @@
 img {
   max-width: 100%;
   display: block;
+  object-fit: contain;
 }
 
 /* ------------
@@ -25,7 +26,7 @@ img {
   --ff-inter: "Inter", sans-serif;
   --fs-big: 1.4rem;
   --fs-regular: 1.2rem;
-  --fs-small: 1.4rem;
+  --fs-small: 1rem;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
@@ -33,7 +34,9 @@ img {
 
   /* Color */
   --clr-black: #000000;
+  --clr-gray-200: #fcfcfc;
   --clr-gray-300: #f2f2f2;
+  --clr-gray-350: #f1f1f1;
   --clr-gray-400: #e6e6e6;
   --clr-gray-600: #dedede;
   --clr-blue-400: #3d8bff;
@@ -58,12 +61,25 @@ strong {
   font-weight: var(--fw-semi-bold);
 }
 
+textarea {
+  font-family: inherit;
+  word-spacing: 0;
+  border: none;
+  background-color: unset;
+  resize: none;
+  overflow: hidden;
+}
+textarea:focus {
+  outline: none;
+}
+
 /* ------------
    GENERAL
 --------------- */
 body {
   font-family: var(--ff-inter);
   font-size: var(--fs-regular);
+  color: var(--clr-black);
 }
 
 button {
@@ -85,23 +101,19 @@ button {
 }
 
 .main {
-  max-width: 52.6rem;
-  border-radius: 5px;
+  width: 52.6rem;
+  height: 74rem;
+  position: relative;
+  background-color: var(--clr-gray-200);
   border: solid 1px var(--clr-gray-600);
+  border-radius: 5px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
-.profile,
-.buttons,
-.description,
-.comments,
-.post {
-  padding-left: 2.5rem;
-}
-
 /* ------------
-   PROFILE
+   SECTIONS
 --------------- */
+
 .profile {
   display: flex;
   padding: 1.5rem;
@@ -117,21 +129,64 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 2.5rem;
 }
 
 .profile__location {
   margin-top: 0.9rem;
+  font-size: var(--fs-small);
 }
 
 .swiper {
-  height: 500px;
+  height: 32.5rem;
 }
 
 .swiper-slide {
-  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 6rem;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.comments__container {
+  margin-bottom: 8rem;
+}
+
+.comment__user {
+  margin-bottom: 2.2rem;
+}
+
+.comment {
+  margin-bottom: 1rem;
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-gray-350);
+  padding: 2rem 1.5rem;
+  border-radius: 5px;
+}
+
+.post__input {
+  width: 34.9rem;
+}
+
+.post__btn {
+  color: var(--clr-blue-400);
+  cursor: pointer;
+}
+
+/* ------------
+   UTILITIES
+--------------- */
+
+.px-1 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }

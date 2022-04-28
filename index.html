@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Fonts -->
@@ -24,9 +24,9 @@
   <body>
     <div class="container">
       <main class="main">
-        <section class="profile">
+        <section class="profile px-1">
           <img class="profile__img" src="./img/avatar.png" alt="Avatar" />
-          <div class="profile__info">
+          <div class="profile__info px-1">
             <h2 class="profile__name">Erik Dunlop</h2>
             <p class="profile__location">San Francisco, California</p>
           </div>
@@ -37,10 +37,6 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -54,7 +50,7 @@
         </section>
 
         <!-- Buttons -->
-        <section class="buttons">
+        <section class="buttons px-1">
           <button class="btn btn--like" type="button">
             <svg
               aria-label="Like"
@@ -125,33 +121,26 @@
         </section>
         <!-- End of Buttons -->
 
-        <!-- Description -->
-        <section class="description">
-          <p class="description__text">
+        <!-- Comments -->
+        <section class="post-section px-1">
+          <p class="comment__user">
             <strong>Erik Dunlop</strong>
             dolor sit amet, consectetur adipiscing elit. Mi enim ut eu cras
             ultrices eget et tristique proin. Mi enim ut eu cras ultrices eget
             et tristique proin.
           </p>
+          <div class="comments__container">
+            <p class="comment">
+              <strong>Comment</strong>
+              consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et
+            </p>
+          </div>
+          <div class="post">
+            <textarea class="post__input" >consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </textarea>
+          <button class="post__btn">Post</button>
+          </div>
         </section>
-        <!-- End of Description -->
-
-        <!-- Comments -->
-        <section class="comments">
-          <p class="comment">
-            <strong>Comment</strong>
-            consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et
-          </p>
-        </section>
-        <!-- End of comments -->
-
-        <!-- Post -->
-        <section class="post">
-          <input
-            type="text"
-            value="consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et "
-          />
-          <button class="btn--post">Post</button>
+        <!-- End of Comments -->
         </section>
         <!-- End of post -->
       </main>
