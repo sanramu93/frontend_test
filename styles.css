@@ -166,21 +166,14 @@ svg {
   cursor: pointer;
 }
 
-.btn-like--red-hide {
+.btn-like-red {
   position: absolute;
   display: none;
 }
 
-.btn-like--red-show {
-  position: absolute;
+.btn-like-red--show {
   display: block;
-}
-
-.btn-like--animate {
-  position: absolute;
-  cursor: pointer;
   transform: scale(1);
-
   animation-name: show;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;

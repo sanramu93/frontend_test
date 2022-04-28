@@ -65,12 +65,12 @@ postBtn.addEventListener("click", () => {
 // LIKE FEATURE
 
 const btnLike = document.querySelector(".btn-like");
-const btnLikeHide = document.querySelector(".btn-like--red-hide");
-const btnLikeShow = document.querySelector(".btn-like--red-show");
+const btnLikeRed = document.querySelector(".btn-like-red");
 
 btnLike.addEventListener("click", () => {
-  btnLikeHide.classList.add("btn-like--red-show");
+  btnLikeRed.classList.add("btn-like-red--show");
+});
 
-  let btnLikeShow = document.querySelector(".btn-like--red-show");
-  btnLikeShow.classList.add("btn-like--animate");
+btnLikeRed.addEventListener("click", () => {
+  btnLikeRed.classList.remove("btn-like-red--show");
 });
