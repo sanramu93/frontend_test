@@ -162,6 +162,14 @@ button {
 
 .comments__container {
   position: absolute;
+  width: 90%;
+  height: 18rem;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.comments__container::-webkit-scrollbar {
+  display: none;
 }
 
 .comment {
