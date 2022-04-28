@@ -61,3 +61,16 @@ postBtn.addEventListener("click", () => {
   commentsEl.appendChild(newComment);
   postInput.value = "";
 });
+
+// LIKE FEATURE
+
+const btnLike = document.querySelector(".btn-like");
+const btnLikeHide = document.querySelector(".btn-like--red-hide");
+const btnLikeShow = document.querySelector(".btn-like--red-show");
+
+btnLike.addEventListener("click", () => {
+  btnLikeHide.classList.add("btn-like--red-show");
+
+  let btnLikeShow = document.querySelector(".btn-like--red-show");
+  btnLikeShow.classList.add("btn-like--animate");
+});
