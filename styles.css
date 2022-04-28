@@ -18,30 +18,120 @@ img {
    CUSTOM PROPS
 --------------- */
 
-/* 
-14
-12
-10
-
-*/
-
 :root {
   font-size: 62.5%;
 
   /* Typography */
   --ff-inter: "Inter", sans-serif;
-  --fs-h2: 1.4rem;
-  --fs-h3: 1.4rem;
-  --fs-p: 1rem;
+  --fs-big: 1.4rem;
+  --fs-regular: 1.2rem;
+  --fs-small: 1.4rem;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
   /* Color */
-  --clr-black: hsl(0, 0%, 0%);
-  --clr-gray-400: hsl(0, 0%, 90%);
-  --clr-gray-600: hsl(0, 0%, 95%);
-  --clr-blue-400: hsl(216, 100%, 62%);
-  --clr-red-400: hsl(355, 82%, 61%);
+  --clr-black: #000000;
+  --clr-gray-300: #f2f2f2;
+  --clr-gray-400: #e6e6e6;
+  --clr-gray-600: #dedede;
+  --clr-blue-400: #3d8bff;
+  --clr-red-400: #ed4a58;
+}
+
+/* ------------
+   TYPOGRAPHY
+--------------- */
+
+h2 {
+  font-size: var(--fs-big);
+  font-weight: var(--fw-medium);
+}
+
+p {
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+}
+
+strong {
+  font-weight: var(--fw-semi-bold);
+}
+
+/* ------------
+   GENERAL
+--------------- */
+body {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-regular);
+}
+
+button {
+  font-family: var(--ff-inter);
+  font-weight: var(--fw-bold);
+  background-color: unset;
+  border: unset;
+}
+
+/* ------------
+   LAYOUT
+--------------- */
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  max-width: 52.6rem;
+  border-radius: 5px;
+  border: solid 1px var(--clr-gray-600);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.profile,
+.buttons,
+.description,
+.comments,
+.post {
+  padding-left: 2.5rem;
+}
+
+/* ------------
+   PROFILE
+--------------- */
+.profile {
+  display: flex;
+  padding: 1.5rem;
+}
+
+.profile__img {
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2.5rem;
+}
+
+.profile__location {
+  margin-top: 0.9rem;
+}
+
+.swiper {
+  height: 500px;
+}
+
+.swiper-slide {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
 }
