@@ -1,5 +1,9 @@
 const swiperWrapper = document.querySelector(".swiper-wrapper");
+const commentsEl = document.querySelector(".comments__container");
+const postInput = document.querySelector(".post__input");
+const postBtn = document.querySelector(".post__btn");
 
+// IMAGE SWIPER
 const getImageUrl = async () => {
   try {
     const res = await fetch(`https://picsum.photos/1080/566`);
@@ -22,37 +26,38 @@ const renderImages = async (amount = 4) => {
   const images = await getImages(amount);
   images.forEach((imgUrl) => {
     const newSlide = document.createElement("div");
-    const newImage = document.createElement("img");
     newSlide.classList.add("swiper-slide");
-    newImage.src = imgUrl;
-    newImage.alt = "Image";
-    newSlide.appendChild(newImage);
+    newSlide.style.background = `url(${imgUrl})`;
     swiperWrapper.appendChild(newSlide);
   });
 
   // SWIPER
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: false,
-
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-    },
-
-    // Navigation arrows
+  new Swiper(".swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
+    pagination: {
+      el: ".swiper-pagination",
     },
   });
-  return swiper;
 };
 
 renderImages(4);
+
+// POST FEATURE
+
+postBtn.addEventListener("click", () => {
+  if (postInput.value === "") return;
+  const newComment = document.createElement("p");
+  newComment.classList.add("comment");
+  newComment.insertAdjacentHTML(
+    "beforeend",
+    `
+    <strong>Comment</strong>
+    ${postInput.value}
+  `
+  );
+  commentsEl.appendChild(newComment);
+  postInput.value = "";
+});
