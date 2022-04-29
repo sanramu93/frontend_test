@@ -3,7 +3,6 @@ const commentsEl = document.querySelector(".comments__container");
 const postInput = document.querySelector(".post__input");
 const postBtn = document.querySelector(".post__btn");
 
-// IMAGE SWIPER
 const getImageUrl = async () => {
   try {
     const res = await fetch(`https://picsum.photos/1080/566`);
@@ -45,8 +44,9 @@ const renderImages = async (amount = 4) => {
 
 renderImages(4);
 
+// -------------
 // POST FEATURE
-
+// -------------
 postBtn.addEventListener("click", () => {
   if (postInput.value === "") return;
   const newComment = document.createElement("p");
@@ -60,10 +60,12 @@ postBtn.addEventListener("click", () => {
   );
   commentsEl.appendChild(newComment);
   postInput.value = "";
+  commentsEl.scrollTop = commentsEl.scrollHeight;
 });
 
-// LIKE FEATURE
-
+// -------------------
+// BUTTON LIKE FEATURE
+// -------------------
 const btnLike = document.querySelector(".btn-like");
 const btnLikeRed = document.querySelector(".btn-like-red");
 
